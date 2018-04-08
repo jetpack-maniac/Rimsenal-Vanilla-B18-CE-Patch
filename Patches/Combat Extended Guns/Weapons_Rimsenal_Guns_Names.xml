@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Combat Extended Guns</modName>
+      </li>
+
+      <!-- ========== Modern Weapons ========== -->
+
+      <!-- ========== Heavy Revolver ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_PistolHeavyRevolver"]/label</xpath>
+        <value>
+          <label>Taurus Raging Bull</label>
+        </value>
+      </li>
+
+      <!-- ========== Repeater ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_Repeater"]/label</xpath>
+        <value>
+          <label>Winchester Model 94</label>
+        </value>
+      </li>
+
+      <!-- ========== Carbine ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_RSCarbine"]/label</xpath>
+        <value>
+          <label>HK 416 CQB</label>
+        </value>
+      </li>
+
+      <!-- ========== Militia Rifle (Removed, already present in CE Guns) ========== -->
+
+      <li Class="PatchOperationRemove">
+        <xpath>*/ThingDef[defName="Gun_MilitiaRifle"]</xpath>
+      </li>
+
+      <!-- ========== Battle Rifle (Removed, already present in CE Guns) ========== -->
+
+      <li Class="PatchOperationRemove">
+        <xpath>*/ThingDef[defName="Gun_RSBattleRifle"]</xpath>
+      </li>
+
+      <!-- ========== Anti-Material Rifle ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_RSAMRifle"]/label</xpath>
+        <value>
+          <label>Barret M107</label>
+        </value>
+      </li>
+
+      <!-- ========== Automatic Rifle ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_AutomaticRifle"]/label</xpath>
+        <value>
+          <label>Browning Automatic Rifle</label>
+        </value>
+      </li>
+
+      <!-- ========== Frontier Rifle ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_FR"]/label</xpath>
+        <value>
+          <label>KTE-6 Frontier Rifle</label>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_FR"]/description</xpath>
+        <value>
+          <description>This is a rifle designed to be cheap and easy to maintain for frontier settlers.  KTE was a nicknane that stands for 'kill the enemy', it become so popular that the name stuck.  This is the 6th revision of this rifle which is semi-automatic and includes a bayonet.</description>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Combat Extended Guns</modName>
+      </li>
+
+      <!-- ========== Charge Weapons ========== -->
+
+      <!-- ========== Charge Sidearm ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_ChargeSidearm"]/label</xpath>
+        <value>
+          <label>R-21 Charge Pistol</label>
+        </value>
+      </li>
+
+      <!-- ========== Scatter Charger ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_ScatterCharger"]/label</xpath>
+        <value>
+          <label>R-22 Scatter Charger</label>
+        </value>
+      </li>
+
+      <!-- ========== Charge Driver ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_ChargeDriver"]/label</xpath>
+        <value>
+          <label>R-14 Charge Driver</label>
+        </value>
+      </li>
+
+      <!-- ========== Burst Charger ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_BurstCharger"]/label</xpath>
+        <value>
+          <label>R-16 Burst Charger</label>
+        </value>
+      </li>
+
+      <!-- ========== Assault Charger ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_AssaultCharger"]/label</xpath>
+        <value>
+          <label>R-19 Assault Charger</label>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Combat Extended Guns</modName>
+      </li>
+
+      <!-- ========== Smart Weapons ========== -->
+
+      <!-- ========== Smart Rifle ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_SmartRifle"]/label</xpath>
+        <value>
+          <label>S-1 Smart Rifle</label>
+        </value>
+      </li>
+
+      <!-- ========== Smart Pistol ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_SmartPistol"]/label</xpath>
+        <value>
+          <label>S-2 Smart Pistol</label>
+        </value>
+      </li>
+
+      <!-- ========== Smart SMG ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_SMG"]/label</xpath>
+        <value>
+          <label>S-3 Smart PDW</label>
+        </value>
+      </li>
+
+      <!-- ========== Smart machine gun ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="SmartMG"]/label</xpath>
+        <value>
+          <label>S-4 Smart SAW</label>
+        </value>
+      </li>
+
+      <!-- ========== Smart sniper rifle ========== -->
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Gun_SmartSniperRifle"]/label</xpath>
+        <value>
+          <label>S-5R Smart Sniper Rifle</label>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+</Patch>

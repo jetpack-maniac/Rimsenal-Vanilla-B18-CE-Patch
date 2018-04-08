@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SmartRifle</defName>
+    <label>rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>7</damageAmountBase>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SmartRifle</defName>
+    <label>smart rifle</label>
+    <description> The development of firearms is not made solely by firepower. Developments have been made in other areas, such as improved aiming optics, ergonomic and convenient design, and integrated fire control system. And this rifle performs exceptionally well in these "other areas".</description>
+    <graphicData>
+      <texPath>Things/A16/SmartRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>1490</MarketValue>
+      <WorkToMake>53500</WorkToMake>
+      <Mass>3.4</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1</Weapon_Bulk>
+    </statBases>
+    <generateCommonality>0.1</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>SmartWeapons</researchPrerequisite>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <ShootingAccuracy>0.15</ShootingAccuracy>
+      <AimingDelayFactor>-0.1</AimingDelayFactor>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>47</Steel>
+      <AdvancedComponent>2</AdvancedComponent>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SmartRifle</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>30</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>RS_ShotSmartRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SmartPistol</defName>
+    <label>pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>9</damageAmountBase>
+      <speed>55</speed>
+    </projectile>
+
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SmartPistol</defName>
+    <label>smart pistol</label>
+    <description>A smart system integrated pistol. The performance of the pistol itself is not much different from a conventional pistol, but the improved target acquisition system makes aiming much faster.</description>
+    <graphicData>
+      <texPath>Things/A16/SmartPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractAutopistol</soundInteract>
+    <statBases>
+      <WorkToMake>24500</WorkToMake>
+      <Mass>1.25</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1</Weapon_Bulk>
+    </statBases>
+    <generateCommonality>0.2</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>SmartWeapons</researchPrerequisite>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <ShootingAccuracy>0.1</ShootingAccuracy>
+      <AimingDelayFactor>-0.18</AimingDelayFactor>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>30</Steel>
+      <AdvancedComponent>1</AdvancedComponent>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SmartPistol</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>22</range>
+        <soundCast>RS_ShotSmartPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+
+	<!-- ============================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_SmartSMG</defName>
+		<label>SMG bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<speed>48</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_SMG</defName>
+		<label>smart SMG</label>
+		<description>A rapid firing anti personnel firearm with an integrated smart system. It excels in close quarter combat due to its compact size and high fire rate.</description>
+		<graphicData>
+			<texPath>Things/A16/SmartSMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractSMG</soundInteract>
+		<statBases>
+			<WorkToMake>51000</WorkToMake>
+			<Mass>3</Mass>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.65</AccuracyShort>
+			<AccuracyMedium>0.4</AccuracyMedium>
+			<AccuracyLong>0.3</AccuracyLong>
+			<RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.75</Weapon_Bulk>
+		</statBases>
+    <generateCommonality>0.15</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>SmartWeapons</researchPrerequisite>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <ShootingAccuracy>0.1</ShootingAccuracy>
+      <AimingDelayFactor>-0.15</AimingDelayFactor>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>40</Steel>
+      <AdvancedComponent>2</AdvancedComponent>
+    </costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_SmartSMG</defaultProjectile>
+				<warmupTime>1.1</warmupTime>
+				<range>16</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>RS_ShotSmartSMG</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+
+
+	<!-- ===================== MG ========================= -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_SmartMG</defName>
+		<label>Machine gun bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<speed>50</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>SmartMG</defName>
+		<label>smart machine gun</label>
+		<description>A man portable machine gun with automatic targeting system. This is a best tool when you need to sweep away acidic blooded creatures.</description>
+		<graphicData>
+			<texPath>Things/A16/SmartMG</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+		<statBases>
+			<WorkToMake>57000</WorkToMake>
+			<Mass>7.5</Mass>
+			<AccuracyTouch>0.55</AccuracyTouch>
+			<AccuracyShort>0.7</AccuracyShort>
+			<AccuracyMedium>0.45</AccuracyMedium>
+			<AccuracyLong>0.3</AccuracyLong>
+			<RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2</Weapon_Bulk>
+		</statBases>
+    <generateCommonality>0.05</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>SmartWeapons</researchPrerequisite>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <ShootingAccuracy>0.1</ShootingAccuracy>
+      <AimingDelayFactor>-0.1</AimingDelayFactor>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>75</Steel>
+      <AdvancedComponent>3</AdvancedComponent>
+    </costList>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_SmartMG</defaultProjectile>
+				<warmupTime>1.7</warmupTime>
+				<range>25</range>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<burstShotCount>10</burstShotCount>
+        <soundCast>RS_ShotSmartMG</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+
+
+	<!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SSR</defName>
+    <label>sniper rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SmartSniperRifle</defName>
+    <label>smart sniper rifle</label>
+    <description>An advanced precision rifle. Integrated ballistic computer guarantees high accuracy at long-range.</description>
+    <graphicData>
+      <texPath>Things/A16/SmartSniperRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>55500</WorkToMake>
+      <Mass>3.85</Mass>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2</Weapon_Bulk>
+    </statBases>
+    <generateCommonality>0.05</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>SmartWeapons</researchPrerequisite>
+    </recipeMaker>
+    <equippedStatOffsets>
+      <ShootingAccuracy>0.2</ShootingAccuracy>
+      <AimingDelayFactor>-0.1</AimingDelayFactor>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>75</Steel>
+      <AdvancedComponent>3</AdvancedComponent>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SSR</defaultProjectile>
+        <warmupTime>3.5</warmupTime>
+        <range>45</range>
+        <soundCast>RS_ShotSSR</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>AdvancedGun</li>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+
+</Defs>

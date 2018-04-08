@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ChargeSidearm</defName>
+		<label>charge shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>14</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_ChargeSidearm</defName>
+		<label>charge sidearm</label>
+		<description>Charged-shot weapon designed to carry and fire with one hand.</description>
+		<graphicData>
+			<texPath>Things/A16/ChargePistol</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>25000</WorkToMake>
+			<Mass>1.8</Mass>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.6</AccuracyMedium>
+			<AccuracyLong>0.4</AccuracyLong>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.6</Weapon_Bulk>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>20</Steel>
+			<Plasteel>20</Plasteel>
+			<Component>4</Component>
+		</costList>
+		<generateCommonality>0.3</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ChargeSidearm</defaultProjectile>
+				<warmupTime>0.35</warmupTime>
+				<range>19</range>
+				<soundCast>ShotChargeRifle</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+	
+	<!-- ============================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ScatterCharger</defName>
+		<label>charge shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_ScatterCharger</defName>
+		<label>scatter charger</label>
+		<description>Charged-shot weapon that designed for use in close range gunfight.</description>
+		<graphicData>
+			<texPath>Things/A16/ScatterCharger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>51500</WorkToMake>
+			<Mass>5</Mass>
+			<AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.9</AccuracyShort>
+			<AccuracyMedium>0.5</AccuracyMedium>
+			<AccuracyLong>0.3</AccuracyLong>
+			<RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.2</Weapon_Bulk>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>40</Steel>
+			<Plasteel>35</Plasteel>
+			<Component>6</Component>
+		</costList>
+		<generateCommonality>0.15</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ScatterCharger</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>12</range>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>ShotChargeRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+	
+	<!-- ============================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_ChargeDriver</defName>
+		<label>charge shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/ChargeLanceShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>50</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_ChargeDriver</defName>
+		<label>charge driver</label>
+		<description>Charged-shot technology based long range precision weapon.</description>
+		<graphicData>
+			<texPath>Things/A16/ChargeDriver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>55000</WorkToMake>
+			<Mass>5.5</Mass>
+			<AccuracyTouch>0.4</AccuracyTouch>
+			<AccuracyShort>0.9</AccuracyShort>
+			<AccuracyMedium>0.85</AccuracyMedium>
+			<AccuracyLong>0.8</AccuracyLong>
+			<RangedWeapon_Cooldown>3.4</RangedWeapon_Cooldown>
+      <Weapon_Bulk>2</Weapon_Bulk>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>50</Steel>
+			<Plasteel>60</Plasteel>
+			<Component>9</Component>
+		</costList>
+		<generateCommonality>0.05</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>AdvancedGun</li>
+			<li>SniperRifle</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_ChargeDriver</defaultProjectile>
+				<warmupTime>3.5</warmupTime>
+				<range>40</range>
+				<soundCast>ChargeLance_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<burstShotCount>1</burstShotCount>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+
+	<!-- ============================================== -->
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Bullet_EMPRifle</defName>
+		<label>EMP blast</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/EMPBlast</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>1.5</explosionRadius>
+			<damageDef>EMP</damageDef>
+			<damageAmountBase>80</damageAmountBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_EMPRifle</defName>
+		<label>EMP rifle</label>
+		<description>Directed electromagnetic pulse discharger. Used for neutralize advanced electronics.</description>
+		<graphicData>
+			<texPath>Things/A16/EMPRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>46500</WorkToMake>
+			<Mass>4.8</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.73</AccuracyShort>
+			<AccuracyMedium>0.78</AccuracyMedium>
+			<AccuracyLong>0.55</AccuracyLong>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.5</Weapon_Bulk>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>DirectedEMP</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>25</Steel>
+			<Plasteel>35</Plasteel>
+			<Component>8</Component>
+		</costList>
+		<generateCommonality>0.1</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_EMPRifle</defaultProjectile>
+				<warmupTime>1.3</warmupTime>
+				<range>25</range>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>ShotChargeRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+
+
+	<!-- ============================================== -->
+
+		<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_AssaultCharger</defName>
+		<label>charge shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/ChargeLanceShot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>12</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_AssaultCharger</defName>
+		<label>assault charger</label>
+		<description>Charged-shot technology based heavy assault weapon.</description>
+		<graphicData>
+			<texPath>Things/A16/ChargeCannon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>53800</WorkToMake>
+			<Mass>7.8</Mass>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.7</AccuracyMedium>
+			<AccuracyLong>0.5</AccuracyLong>
+			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+			      <Weapon_Bulk>2</Weapon_Bulk>
+		</statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.2</MoveSpeed>
+    </equippedStatOffsets>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>55</Steel>
+			<Plasteel>65</Plasteel>
+			<Component>10</Component>
+		</costList>
+		<generateCommonality>0.05</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_AssaultCharger</defaultProjectile>
+				<warmupTime>2.3</warmupTime>
+				<range>23</range>
+				<burstShotCount>5</burstShotCount>
+				<soundCast>ChargeLance_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<muzzleFlashScale>15</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+
+	<!-- ============================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_BurstCharger</defName>
+		<label>charge shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Long</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>80</speed>
+		</projectile>
+	</ThingDef>
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_BurstCharger</defName>
+		<label>burst charger</label>
+		<description>Usually referred as "GEN 2" or "Charge battle rifle", the burst charger is a heavier variant of the charge rifle. It earned lengthened range and higher punch in exchange for slow fire rate and increased weight.</description>
+		<graphicData>
+			<texPath>Things/A16/ChargeBR</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<statBases>
+			<WorkToMake>53000</WorkToMake>
+			<Mass>5.15</Mass>
+			<AccuracyTouch>0.65</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.75</AccuracyMedium>
+			<AccuracyLong>0.6</AccuracyLong>
+			<RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.5</Weapon_Bulk>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>ChargedShot</researchPrerequisite>
+		</recipeMaker>
+		<costList>
+			<Steel>30</Steel>
+			<Plasteel>50</Plasteel>
+			<Component>8</Component>
+		</costList>
+		<generateCommonality>0.1</generateCommonality>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>AdvancedGun</li>
+		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>Bullet_BurstCharger</defaultProjectile>
+				<warmupTime>1.48</warmupTime>
+				<range>30</range>
+				<soundCast>ChargeLance_Fire</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+	</ThingDef>
+
+</Defs>

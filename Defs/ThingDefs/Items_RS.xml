@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <ThingDef ParentName="ResourceBase">
+    <defName>VanillaIceCream</defName>
+    <label>vanilla ice cream</label>
+    <description>Delicious vanilla ice cream, packed in insulated box. Unfortunately, there is a no chocolate ice cream around here.</description>
+    <graphicData>
+      <texPath>Things/A16/VanillaIceCream</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+		<socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>20</MarketValue>
+      <Mass>0.1</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>15</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <foodType>Processed</foodType>
+      <nutrition>0.15</nutrition>
+      <joy>0.2</joy>
+      <joyKind>Gluttonous</joyKind>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>20</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+
+  </ThingDef>
+
+</Defs>

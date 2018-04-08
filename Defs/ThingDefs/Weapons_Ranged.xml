@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- ======================================================== -->
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Compound</defName>
+    <label>carbon arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <speed>75</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <techLevel>Industrial</techLevel>
+    <defName>Bow_Compound</defName>
+    <label>compound bow</label>
+    <description>A modern compound bow. Fires a high velocity arrow fast.</description>
+    <graphicData>
+      <texPath>Things/A16/CompoundBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>BowLarge</soundInteract>
+    <costList>
+      <Steel>95</Steel>
+      <Component>2</Component>
+    </costList>
+    <statBases>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>1.4</Mass>
+      <AccuracyTouch>0.93</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.75</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>1.3</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1</Weapon_Bulk>
+    </statBases>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Great</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <range>30</range>
+        <soundCast>BowLarge</soundCast>
+      </li>
+    </verbs>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <tools>
+      <li>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <!-- ======================================================== -->
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Bullet_Blowgun</defName>
+    <label>dart</label>
+    <graphicData>
+      <texPath>Things/Projectile/RSDart</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Dart</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Gun_Blowgun</defName>
+    <label>blowgun</label>
+    <description>A simple weapon consisting of a narrow, long tube for firing light projectiles or darts. While dart itself is not so lethal, it has poison on the tip.</description>
+    <graphicData>
+      <texPath>Things/A16/Blowgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>BowSmall</soundInteract>
+    <costList>
+      <HerbalMedicine>5</HerbalMedicine>
+      <WoodLog>30</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>13000</WorkToMake>
+      <Mass>0.5</Mass>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.66</AccuracyShort>
+      <AccuracyMedium>0.31</AccuracyMedium>
+      <AccuracyLong>0.12</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+      <Weapon_Bulk>0.5</Weapon_Bulk>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRanged</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Blowgun</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <range>10</range>
+        <soundCast>BowSmall</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- ======================================================== -->
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Bullet_ThrowingAxes</defName>
+    <label>throwing axe</label>
+    <graphicData>
+      <texPath>Things/Projectile/ThrowingAxe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>20</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <techLevel>Industrial</techLevel>
+    <defName>Gun_ThrowingAxes</defName>
+    <label>throwing axes</label>
+    <description>Metal forged throwing axes. In the trained hands, these can be a devastating tool both in melee and ranged combat.</description>
+    <graphicData>
+      <texPath>Things/A16/ThrowingAxes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <Mass>4.4</Mass>
+      <AccuracyTouch>0.93</AccuracyTouch>
+      <AccuracyShort>0.55</AccuracyShort>
+      <AccuracyMedium>0.25</AccuracyMedium>
+      <AccuracyLong>0.20</AccuracyLong>
+      <RangedWeapon_Cooldown>2.75</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>105</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThrowingAxes</defaultProjectile>
+        <warmupTime>2.8</warmupTime>
+        <range>13</range>
+        <soundCast>Interact_BeatFire</soundCast>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.7</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.7</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <!-- ======================================================== -->
+
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Bullet_ThrowingClubs</defName>
+    <label>throwing club</label>
+    <graphicData>
+      <texPath>Things/Projectile/ThrowingClub</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Blunt</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>20</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Gun_ThrowingClubs</defName>
+    <label>throwing clubs</label>
+    <description>The one of the first ranged weapons used by early humans, throwing club can be used in both melee and ranged attack.</description>
+    <graphicData>
+      <texPath>Things/A16/ThrowingClubs</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <costList>
+      <WoodLog>45</WoodLog>
+    </costList>
+    <statBases>
+      <WorkToMake>12100</WorkToMake>
+      <Mass>2.3</Mass>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.6</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.1</AccuracyLong>
+      <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1</Weapon_Bulk>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRanged</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_ThrowingClubs</defaultProjectile>
+        <warmupTime>1.25</warmupTime>
+        <range>14</range>
+        <soundCast>Interact_BeatFire</soundCast>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>
+
+
