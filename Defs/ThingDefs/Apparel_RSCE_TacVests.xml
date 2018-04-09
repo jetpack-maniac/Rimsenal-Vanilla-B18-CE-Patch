@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_RSTacVest</defName>
+    <label>tactical combat vest</label>
+    <description>An ergonomically designed body armor. This type of armor increase wearer's combat efficiency.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData> <texPath>Things/Apparel/TacVest</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <statBases>
+      <Mass>3.65</Mass>
+      <Bulk>6</Bulk>
+      <WornBulk>2.5</WornBulk>
+      <WorkToMake>35000</WorkToMake>
+      <MaxHitPoints>290</MaxHitPoints>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+    </statBases>
+    <equippedStatOffsets>
+      <AimingDelayFactor>-0.05</AimingDelayFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    </recipeMaker>
+    <costList>
+      <Component>4</Component>
+      <Plasteel>26</Plasteel>
+    </costList>
+      <generateCommonality>0.5</generateCommonality>
+    <apparel>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/TacVest</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <tags>
+        <li>Military</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelCarryGearBase">
+    <defName>Apparel_CETacVest</defName>
+    <label>tactical vest</label>
+    <description>A loadbearing vest with a number of pouches to store magazines and other equipment.\n\nSpeeds up reloading but is quite bulky to wear.</description>
+    <graphicData>
+      <texPath>Things/Apparel/TacRigging/TacRigging</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>2</Mass>
+      <Bulk>10</Bulk>
+      <WornBulk>5</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryBulk>30</CarryBulk>
+      <ReloadSpeed>0.1</ReloadSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Cloth>60</Cloth>
+    </costList>
+    <apparel>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <tags>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <modExtensions>
+      <li Class="CombatExtended.VisibleAccessoryDefExtension">
+        <order>1</order>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+
+</Defs>

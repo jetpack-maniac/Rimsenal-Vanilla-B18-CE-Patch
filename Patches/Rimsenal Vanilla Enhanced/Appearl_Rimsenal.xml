@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+
+      <!-- Tactical Vest (This Def collides with CE's tactical vest and must be moved) -->
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_TacVest"]</xpath>
+      </li>
+
+      <!-- Tactical Helment -->
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_TacHelmet"]/equippedStatOffsets/MoveSpeed</xpath>
+      </li>
+
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_TacHelmet"]/statBases/MarketValue</xpath>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Apparel_TacHelmet"]/label</xpath>
+        <value>
+           <label>tactical combat helment</label>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_TacHelmet"]/statBases</xpath>
+        <value>
+           <Bulk>5</Bulk>
+           <WornBulk>1</WornBulk>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_TacHelmet"]/recipeMaker</xpath>
+        <value>
+          <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        </value>
+      </li>
+
+      <!-- Exoframe -->
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_Exoframe"]/statBases/MarketValue</xpath>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_Exoframe"]/statBases</xpath>
+        <value>
+           <Bulk>12</Bulk>
+           <WornBulk>4</WornBulk>
+           <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+           <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+        </value>
+      </li>
+
+      <!-- Protective Gear -->
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_ProtectiveGear"]/equippedStatOffsets/MoveSpeed</xpath>
+      </li>
+
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_ProtectiveGear"]/statBases/MarketValue</xpath>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_ProtectiveGear"]/statBases</xpath>
+        <value>
+           <Bulk>15</Bulk>
+           <WornBulk>9</WornBulk>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_ProtectiveGear"]/recipeMaker</xpath>
+        <value>
+           <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        </value>
+      </li>
+
+      <!-- Protective Helmet -->
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_ProtectiveHelmet"]/equippedStatOffsets/MoveSpeed</xpath>
+      </li>
+
+      <li Class="PatchOperationRemove">
+          <xpath>*/ThingDef[defName="Apparel_ProtectiveHelmet"]/statBases/MarketValue</xpath>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_ProtectiveHelmet"]/statBases</xpath>
+        <value>
+           <Bulk>6</Bulk>
+           <WornBulk>3</WornBulk>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Apparel_ProtectiveHelmet"]/recipeMaker</xpath>
+        <value>
+           <researchPrerequisite>MicroelectronicsBasics</researchPrerequisite>
+        </value>
+      </li>
+
+    </operations>
+  </Operation>
+</Patch>
